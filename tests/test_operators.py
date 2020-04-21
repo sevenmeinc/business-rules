@@ -6,6 +6,7 @@ from . import TestCase
 from decimal import Decimal
 import sys
 
+
 class StringOperatorTests(TestCase):
 
     def test_operator_decorator(self):
@@ -59,10 +60,10 @@ class NumericOperatorTests(TestCase):
         ten_int = 10
         ten_float = 10.0
         if sys.version_info[0] == 2:
-            ten_long = long(10)
+            ten_long = long(10)  # noqa
         else:
-            ten_long = int(10) # long and int are same in python3
-        ten_var_dec = NumericType(ten_dec) # this should not throw an exception
+            ten_long = int(10)  # long and int are same in python3
+        ten_var_dec = NumericType(ten_dec)  # this should not throw an exception
         ten_var_int = NumericType(ten_int)
         ten_var_float = NumericType(ten_float)
         ten_var_long = NumericType(ten_long)

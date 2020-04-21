@@ -170,4 +170,7 @@ class IntegrationTests(TestCase):
                              'name': 'equal_to_case_insensitive'},
                             {'input_type': 'text', 'label': 'Matches Regex', 'name': 'matches_regex'},
                             {'input_type': 'none', 'label': 'Non Empty', 'name': 'non_empty'},
-                            {'input_type': 'text', 'label': 'Starts With', 'name': 'starts_with'}]})
+                            {'input_type': 'text', 'label': 'Starts With', 'name': 'starts_with'}],
+                           'object': [{'input_type': 'text',
+                             'label': 'Predicate',
+                             'name': 'predicate'}]})

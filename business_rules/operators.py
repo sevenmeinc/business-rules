@@ -235,3 +235,14 @@ class SelectMultipleType(BaseType):
     @type_operator(FIELD_SELECT_MULTIPLE)
     def shares_no_elements_with(self, other_value):
         return not self.shares_at_least_one_element_with(other_value)
+
+@export_type
+class ObjectType(BaseType):
+    name = "object"
+
+    def _assert_valid_value_and_cast(self, value):
+        return value
+
+    @type_operator(FIELD_TEXT)
+    def predicate(self, other_value):
+        return other_value(self.value)
